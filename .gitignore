@@ -1,0 +1,12 @@
+# Ignore python temp files
+*.pyc
+*.py~
+
+# Ignore python cache directory
+__pycache__/
+
+# Jetbrain PyCharm
+.idea/
+
+# Ignore mac useless files
+.DS_Store
