@@ -74,6 +74,8 @@ def delete_node_value(node, system='default'):
 #-------------------node cleaning up--------------------
 def delete_node(node, system='default'):
     for neighbor in neighbors(node):
+        edges = get_set(neighbor, system='default')
+        edges.remove(node)
         delete_edge_value(node, neighbor)
     delete_node_value(node)
     return get_redis(system).delete(node)
